@@ -12,6 +12,7 @@ http
     if (req.method === 'POST') {
       // 数据格式
       console.log('content-type', req.headers['content-type']);
+      console.log(req);
       // 接收数据
       let postData = '';
       req.on('data', (chunk) => {
@@ -20,7 +21,7 @@ http
       req.on('end', () => {
         // console.log('postData:', postData);
 
-        res.end(res);
+        res.end('end world!');
       });
     }
   })
